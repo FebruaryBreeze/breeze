@@ -1,0 +1,7 @@
+dist: xenial
+
+script:
+  - mkdir build && cd build
+  - cmake -DBUILD_TEST=ON ..
+  - cmake --build . -- -j
+  - ./unit_tests
